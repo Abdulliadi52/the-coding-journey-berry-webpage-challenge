@@ -7,14 +7,16 @@
   font-family: "Open Sans", sans-serif;
   /* rgba(162,38,23,255) */
 }
-
+body {
+  height: 100vh;
+  overflow: hidden;
+}
 main {
   background: linear-gradient(to right, rgb(222, 48, 30), #ab1811);
   padding-top: 20px;
   padding-left: 50px;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
 }
 nav {
   display: flex;
@@ -167,13 +169,17 @@ button {
   }
 }
 @media screen and (max-width: 980px) {
-  .fixed {
-    position: fixed;
+  body {
+    height: 100%;
+    overflow-y: scroll;
   }
+  .fixed {
+    overflow-y: hidden;
+  }
+
   main {
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-behavior: smooth;
   }
   .about {
